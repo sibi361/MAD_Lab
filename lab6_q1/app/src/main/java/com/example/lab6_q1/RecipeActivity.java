@@ -2,7 +2,6 @@ package com.example.lab6_q1;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Looper;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -29,6 +28,7 @@ public class RecipeActivity extends AppCompatActivity {
         });
 
         TextView resultTextview = findViewById(R.id.resultTextview);
+        Button cookBtn = findViewById(R.id.cookBtn);
         Button returnBtn = findViewById(R.id.returnBtn);
         ImageView recipeImageView = findViewById(R.id.recipeImageView);
 
@@ -37,10 +37,18 @@ public class RecipeActivity extends AppCompatActivity {
         assert recipe != null;
 
         resultTextview.setText(String.format("Name: %s\nPreparation time: %s\nCooking time: %s\n" +
-                        "Servings: %s\nDifficulty: %s\nCuisine: %s\nCalories Per Serving: %s\nRating: %s",
+                        "Servings: %s\nDifficulty: %s\nCuisine: %s\nCalories Per Serving: %s\n" +
+                        "Rating: %s\nTags: %s",
                 recipe.getName(), recipe.getPrepTimeMinutes(), recipe.getCookTimeMinutes(),
                 recipe.getServings(), recipe.getDifficulty(), recipe.getCuisine(),
-                recipe.getCaloriesPerServing(), recipe.getRating()));
+                recipe.getCaloriesPerServing(), recipe.getRating(), recipe.getTags()));
+
+        cookBtn.setOnClickListener(v -> {
+            Intent intent2 = new Intent(RecipeActivity.this, CookActivity.class);
+            intent2.putExtra("ingredients", recipe.getIngredients());
+            intent2.putExtra("instructions", recipe.getInstructions());
+            startActivity(intent2);
+        });
 
         returnBtn.setOnClickListener(v -> {
             this.finish();

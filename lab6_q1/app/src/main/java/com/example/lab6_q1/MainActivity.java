@@ -93,6 +93,24 @@ class Recipe implements Serializable {
     public float getReviewCount() {
         return reviewCount;
     }
+
+    public String getIngredients() {
+        return String.join(", ", ingredients);
+    }
+
+    public String getInstructions() {
+        StringBuilder formattedString = new StringBuilder("\n");
+
+        for (int i = 0; i < instructions.size(); i++) {
+            formattedString.append((i + 1)).append(". ").append(instructions.get(i)).append("\n");
+        }
+
+        return formattedString.toString();
+    }
+
+    public String getTags() {
+        return String.join(", ", tags);
+    }
 }
 
 class ApiResponse {
