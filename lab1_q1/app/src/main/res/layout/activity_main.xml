@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="20dp"
+        android:text="User Profile"
+        android:textAlignment="center"
+        android:textSize="40sp" />
+
+    <EditText
+        android:id="@+id/firstNameField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/lastNameField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Last Name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/emailIdField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Email ID"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/mobileField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="30dp"
+        android:hint="Mobile no."
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="100dp"
+        android:layout_marginTop="120dp"
+        android:text="Submit" />
+
+    <TextView
+        android:id="@+id/firstNameDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="50dp"
+        android:textSize="20sp"
+        android:visibility="invisible" />
+    <TextView
+        android:id="@+id/lastNameDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        android:textSize="20sp"
+        android:visibility="invisible" />
+    <TextView
+        android:id="@+id/emailIdDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        android:textSize="20sp"
+        android:visibility="invisible" />
+    <TextView
+        android:id="@+id/mobileNoDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        android:textSize="20sp"
+        android:visibility="invisible" />
+</LinearLayout>

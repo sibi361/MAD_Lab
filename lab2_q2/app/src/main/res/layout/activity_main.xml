@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="50dp"
+        android:text="Cryptography Tools"
+        android:textAlignment="center"
+        android:textSize="30dp" />
+
+    <EditText
+        android:id="@+id/keyField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Key"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/plaintextField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Plaintext for encryption"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/ciphertextField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Ciphertext for decryption" />
+
+    <Button
+        android:id="@+id/encryptBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="100dp"
+        android:layout_marginTop="60dp"
+        android:text="Encrypt" />
+
+    <Button
+        android:id="@+id/decryptBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="100dp"
+        android:layout_marginTop="40dp"
+        android:text="Decrypt" />
+
+    <Button
+        android:id="@+id/copyResultBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="100dp"
+        android:layout_marginTop="40dp"
+        android:text="Copy Result"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/outputTextview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginHorizontal="40dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="20dp" />
+</LinearLayout>
